@@ -1,0 +1,69 @@
+﻿@model IEnumerable<QuanLyNhanSu.Models.NhanSu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MANV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HOTEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HESOLUONG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TRINHDO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MANV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HOTEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIACHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYSINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIOITINH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HESOLUONG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TRINHDO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MANV }, new { @class = "btn btn-primary" }) &nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("Details", "Details", new {  id=item.MANV }, new { @class = "btn btn-success" }) &nbsp;&nbsp;&nbsp;
+            @Html.ActionLink("Delete", "Delete", new {  id=item.MANV }, new { @class = "btn btn-danger" }) &nbsp;&nbsp;&nbsp;
+        </td>
+    </tr>
+}
+
+</table>

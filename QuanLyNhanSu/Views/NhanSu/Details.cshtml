@@ -1,0 +1,74 @@
+﻿@model QuanLyNhanSu.Models.NhanSu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhanSu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MANV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MANV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HOTEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HOTEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIACHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIACHI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAYSINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAYSINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIOITINH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIOITINH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HESOLUONG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HESOLUONG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TRINHDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TRINHDO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
